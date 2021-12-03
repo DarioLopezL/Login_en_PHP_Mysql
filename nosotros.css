@@ -1,0 +1,122 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor{
+    background: #0D1F2D;
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, lfr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "imagen section section"
+    "imagen2  article article" 
+    "footer footer footer";
+}
+
+nav{
+    background: #9EA3B0;
+    
+    height: 100px;
+    grid-area: nav;
+}
+
+ul{
+    padding-top: 40px;
+    margin-left:  20px;
+    text-align: left;
+    
+}
+li{
+    display: inline-block;
+    margin-right: 20px;   
+    
+}
+a{
+    text-decoration: none;
+    color: #0D1F2D;
+    font-size: 25px;
+    font-weight: bolder;
+}
+header{
+    
+    height: 600px;
+    background: url("imagen-nosotros/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    grid-area: header;
+}
+h1{
+    padding-top: 100px;
+    font-size: 100px;
+    color: white;
+}
+.imagen{
+    margin-left: 10px;
+}
+.imagen2{
+    margin-left: 10px;
+}
+.imagen3{
+    
+    width: 500px;
+    height: 400px;
+    padding-bottom: 10px;
+    grid-area: imagen;
+}
+.imagen4{
+    
+    width: 500px;
+    height: 400px;
+    grid-area: imagen2;
+}
+section{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    grid-area: section;
+    color: white;
+    border-bottom: 2px #9EA3B0 solid;
+}
+
+h2{
+    color: #9EA3B0;
+    
+    text-align: center;
+    padding-top: 100px;
+}
+
+article{
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-area: article;
+    color: white;
+}
+.final{
+    padding: 0px;
+}
+footer{
+    border-top: 2px #9EA3B0 solid;
+    clear: both;
+    color: #9EA3B0;
+    text-align: center;
+    font-size: 20px;
+    grid-area: footer;
+
+}
+@media screen and(max-width:768px) {
+    .contenedor{
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "section section section"
+    "article  article article" 
+    "footer footer footer";
+    }
+    
+}
